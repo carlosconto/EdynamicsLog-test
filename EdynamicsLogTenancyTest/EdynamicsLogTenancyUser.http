@@ -1,0 +1,48 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+
+@hostname=localhost
+@port=5255
+
+GET http://{{hostname}}:{{port}}/company_3/getusers
+###
+
+###
+GET http://{{hostname}}:{{port}}/company_3/getuserbyid/1
+###
+
+###
+POST http://{{hostname}}:{{port}}/company_3/createuser
+Content-Type: application/json
+Accept: application/json
+Accept-Language: en-US,en;q=0.5
+{
+  "email": "user 1",
+  "password": "123"
+}
+###
+
+###
+PUT http://{{hostname}}:{{port}}/company_3/updateuser/1
+Content-Type: application/json
+Accept: application/json
+Accept-Language: en-US,en;q=0.5
+{
+  "email": "product 2",
+  "password": "product-2",
+}
+###
+
+###
+DELETE http://{{hostname}}:{{port}}/company_3/deleteuser/1
+###
+
+###
+POST http://{{hostname}}:{{port}}/company_3/login
+Content-Type: application/json
+Accept: application/json
+Accept-Language: en-US,en;q=0.5
+{
+  "email": "user 1",
+  "password": "123"
+}
+###

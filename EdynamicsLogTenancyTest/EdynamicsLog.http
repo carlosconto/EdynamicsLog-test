@@ -1,0 +1,41 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+
+@hostname=localhost
+@port=5255
+
+
+GET http://{{hostname}}:{{port}}/company_3/getproducts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJ1c2VyIDEiLCJVc2VySWQiOiIxIiwiVGVuYW50SWQiOiIzIiwiaWF0IjoxNzE3MTY2NDM0LCJqdGkiOiIwMjQ3NjYxYS1lNDU1LTQ4OWUtOTI3Mi1kY2U0MmY4MDMwMjYiLCJuYmYiOjE3MTcxNjY0OTQsImV4cCI6MTcxNzE5NTIzNCwiaXNzIjoiaHR0cHM6Ly9lZHluYW1pY3Nsb2cuY29tLyIsImF1ZCI6Imh0dHBzOi8vZWR5bmFtaWNzbG9nLmNvbS8ifQ.5OMKYOmE9cqZcQBOfH7442mMBMnRj5uc6V-HiLo_NM4
+###
+
+###
+GET http://{{hostname}}:{{port}}/company_3/getproductbyid/1
+
+
+###
+POST http://{{hostname}}:{{port}}/company_3/createproduct
+Content-Type: application/json
+Accept: application/json
+Accept-Language: en-US,en;q=0.5
+{
+  "name": "product 2",
+  "sku": "product-2",
+  "price": "1"
+}
+###
+
+###
+PUT http://{{hostname}}:{{port}}/company_3/updateproduct/1
+Content-Type: application/json
+Accept: application/json
+Accept-Language: en-US,en;q=0.5
+{
+  "name": "product 1",
+  "sku": "product-1",
+  "price": "1"
+}
+###
+
+###
+DELETE http://{{hostname}}:{{port}}/company_3/deleteproduct/1
+###
